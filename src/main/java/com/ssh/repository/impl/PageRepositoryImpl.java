@@ -10,16 +10,11 @@ import org.springframework.stereotype.Repository;
 
 import com.ssh.entity.Person;
 import com.ssh.repository.PageRepository;
+import com.ssh.repository.SessionBaseRepository;
 
 @Repository("pageRepository")
-public class PageRepositoryImpl implements PageRepository {
+public class PageRepositoryImpl extends SessionBaseRepositoryImpl implements PageRepository {
 
-	@Autowired
-	private SessionFactory sessionFactory;
-
-	public Session getCurrentSession() {
-		return this.sessionFactory.getCurrentSession();
-	}
 
 	/**
 	 * 分页查询

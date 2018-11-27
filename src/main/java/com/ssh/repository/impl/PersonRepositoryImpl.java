@@ -12,14 +12,8 @@ import com.ssh.entity.Person;
 import com.ssh.repository.PersonRepository;
 
 @Repository("personRepository")
-public class PersonRepositoryImpl implements PersonRepository {
+public class PersonRepositoryImpl extends SessionBaseRepositoryImpl implements PersonRepository {
 
-	@Autowired
-	private SessionFactory sessionFactory;
-
-	public Session getCurrentSession() {
-		return this.sessionFactory.getCurrentSession();
-	}
 
 	public Person load(Long id) {
 		// TODO Auto-generated method stub
