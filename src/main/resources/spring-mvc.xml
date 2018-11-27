@@ -12,7 +12,8 @@
 	<!-- welcome-file -->
 	<mvc:view-controller path="/" view-name="redirect:findAll?pageNo=1" />
 
-	<context:component-scan base-package="com.ssh">
+	<!-- use-default-filters="false" 需要和 context:include-filter 一起使用，而不能和 context:exclude-filter 属性一起使用。 -->
+	<context:component-scan base-package="com.ssh" use-default-filters="false">
 		<!-- 只扫描注解为@Controller的类 -->
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
@@ -20,7 +21,7 @@
 		<context:include-filter type="annotation"
 			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
 		<!-- 只扫描Controller,不扫描Service -->
-		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+<!-- 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/> -->
 	</context:component-scan>
 
 	<!-- 对模型视图名称的解析,在请求时模型视图名称添加前后缀 -->
