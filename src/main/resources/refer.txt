@@ -1,0 +1,13 @@
+spring+springmvc+hibernate
+https://www.cnblogs.com/xrog/p/6359706.html
+
+modul
+https://www.cnblogs.com/qlqwjy/p/7421692.html
+https://www.cnblogs.com/qlqwjy/p/7422238.html
+
+page
+https://www.jb51.net/article/102319.htm
+
+getCurrentSession
+https://blog.csdn.net/frankcheng5143/article/details/51308344
+--------------------------------------------
